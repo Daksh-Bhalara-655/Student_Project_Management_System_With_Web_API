@@ -16,8 +16,25 @@ After completing this guide, you will understand:
 ---
 
 # Chapter 1: What is Validation?
+## Example Registration Form
 
-Imagine a user fills out a registration form.
+### User Input Before Validation
+
+![Registration Form with Invalid Data](image(32).png)
+
+Notice the following issues:
+
+- Name field is empty
+- Email contains `abc`, which is not a valid email format
+- Password is too short
+
+This data should not be saved to the database. Validation helps detect these problems before processing the request.
+
+---
+
+# Chapter 1: What is Validation?
+
+Imagine a user fills out a registration form:
 
 ```json
 {
@@ -25,13 +42,8 @@ Imagine a user fills out a registration form.
   "email": "abc",
   "password": "12"
 }
+
 ```
-
-Problems:
-
-* Name is empty
-* Email format is incorrect
-* Password is too short
 
 Should we save this data to the database?
 
